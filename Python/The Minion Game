@@ -1,0 +1,17 @@
+def minion_game(string):
+    s1=0
+    s2=0
+    l=len(string)
+    v=['a','A','e','E','I','i','o','O','u','U']
+    for i in range(l):
+        if string[i] in v:
+            s2+=l-i
+        else:
+            s1+=l-i
+    if s1==s2:
+        print("Draw")
+    elif s2>s1:
+        print ("Kevin",s2)
+    else:
+        print ("Stuart",s1)
+
