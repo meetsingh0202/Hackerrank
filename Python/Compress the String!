@@ -1,0 +1,23 @@
+input_str = list(input())
+list_str = []
+for i in range(len(input_str)):
+    count = 0
+    if i==0:
+        for j in range(i,len(input_str)):
+            if input_str[i] == input_str[j]:
+                count += 1
+            else:
+                break
+    else :
+        if input_str[i]==input_str[i-1]:
+            continue
+        else:
+            for j in range(i,len(input_str)):
+                if input_str[i] == input_str[j]:
+                    count += 1
+                else:
+                    break
+    list_str.append(count)
+    list_str.append(int(input_str[i]))
+    print(tuple(list_str),end=' ')
+    list_str = []
