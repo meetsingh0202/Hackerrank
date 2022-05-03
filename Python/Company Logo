@@ -1,0 +1,4 @@
+from collections import Counter
+s_count = Counter(sorted(input()))
+for letter,value in s_count.most_common(3):
+    print(letter,value)
