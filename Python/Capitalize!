@@ -1,0 +1,13 @@
+
+
+# Complete the solve function below.
+def solve(s):
+    f = s.split(" ")
+    d =[]
+    for i in f:
+        if (i and i[0].isalpha):
+            e = i[0].upper()
+            d.append(e + i[1:])
+        else:
+            d.append(i)
+    return (" ".join(d))
