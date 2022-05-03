@@ -1,0 +1,11 @@
+no_of_shoes=int(input())
+shoes=list(map(int,input().split()))
+profit=0
+for _ in range(int(input())):
+    size,cost=map(int,input().split())
+    if size not in shoes:
+        continue
+    else:
+        profit+=cost
+        shoes.remove(size)
+print(profit)
