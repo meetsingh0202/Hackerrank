@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n = int(input())
+header = input().strip().split()
+mark_index = header.index('MARKS')
+marks = []
+for i in range(n):
+    data = input().strip().split()
+    marks.append(int(data[mark_index]))
+print('{:00.2f}'.format(sum(marks)/n))
